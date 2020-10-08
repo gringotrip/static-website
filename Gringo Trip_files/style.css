@@ -847,7 +847,7 @@ h3 {
 .header-area .main-header-area {
   background: #fff;
   background: transparent;
-  padding: 25px 100px 25px 35px;
+  padding: 25px 35px 25px 35px;
 }
 
 /* line 21, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_header.scss */
@@ -1163,7 +1163,7 @@ h3 {
 @media (min-width: 1200px) and (max-width: 1500px) {
   /* line 267, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_header.scss */
   .header-area .social_wrap {
-    margin-right: 55px;
+    /***margin-right: 55px;***/
   }
 }
 
@@ -1748,8 +1748,8 @@ h3 {
 
 /* line 9, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_footer.scss */
 .footer .footer_top {
-  padding-top: 115px;
-  padding-bottom: 129px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 @media (max-width: 767px) {
@@ -2511,6 +2511,10 @@ h3 {
 /* line 1, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_where_to_go.scss */
 .where_togo_area {
   background: #040E27;
+  background-image: linear-gradient(45deg, rgb(4 14 39 / .6), rgb(4 14 39 / .6)), url(Munich_-_panorama.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   padding: 50px 0;
 }
 
@@ -2595,7 +2599,8 @@ h3 {
   width: 100%;
   height: 50px;
   background: transparent;
-  border: 1px solid #363E52;
+  /***border: 1px solid #363E52;***/
+  border: 1px solid #F7FAFD;
   padding-left: 15px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -2606,7 +2611,7 @@ h3 {
 /* line 49, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_where_to_go.scss */
 .where_togo_area .search_wrap .input_field input::placeholder {
   font-size: 16px;
-  color: #AAB1B7;
+  color: #F7FAFD;
   font-weight: 300;
 }
 
@@ -2862,15 +2867,12 @@ h3 {
 
 /* line 118, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_destination.scss */
 .destination_details_info {
-  padding-bottom: 150px;
-  padding-top: 70px;
+  
 }
 
 @media (max-width: 767px) {
   /* line 118, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_destination.scss */
   .destination_details_info {
-    padding-top: 70px;
-    padding-bottom: 70px;
   }
 }
 
@@ -3067,8 +3069,8 @@ h3 {
 
 /* line 1, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
 .popular_places_area {
-  padding-top: 142px;
-  padding-bottom: 150px;
+  padding-top: 70px;
+  padding-bottom: 20px;
   background: #F7FAFD;
 }
 
@@ -3103,6 +3105,10 @@ h3 {
 /* line 18, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
 .popular_places_area .single_place .thumb img {
   width: 100%;
+  /***  ***/
+  height: 230px;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* line 21, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
@@ -3139,6 +3145,8 @@ h3 {
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  /***  ***/
+  overflow-wrap: break-word;
 }
 
 /* line 43, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
@@ -3146,8 +3154,11 @@ h3 {
   font-size: 14px;
   font-weight: 400;
   color: #7A838B;
-  margin-top: 2px;
+  /***margin-top: 2px;***/
+  margin-top: 15px;
   margin-bottom: 7px;
+  /***  ***/
+  display: inline-block;
 }
 
 /* line 52, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
@@ -6681,3 +6692,133 @@ h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/***** CSS NOVO *****/
+.header-area .seach_icon{
+  display: none;
+}
+
+.popular_places_area .single_place .place_info .rating_days{
+  display: inline-block !important;
+  line-height: 28px;
+  margin-top: 15px;
+  margin-bottom: 7px;
+  margin-left: 15px;
+}
+
+/*** CAROUSEL ***/
+.carousel-wrap {
+  margin: 0 auto 30px;
+  padding: 0 30px;
+  width: 100%;
+  position: relative;
+}
+/* fix blank or flashing items on carousel */
+.owl-carousel .item {
+  position: relative;
+  z-index: 100; 
+  -webkit-backface-visibility: hidden; 
+  margin-right: 10px;
+  margin-left: 10px;
+}
+/* end fix */
+.owl-nav > div {
+  margin-top: -26px;
+  position: absolute;
+  top: 50%;
+  color: #cdcbcd;
+}
+.owl-nav i {
+  font-size: 52px;
+}
+.owl-nav .owl-prev {
+  left: -30px;
+}
+.owl-nav .owl-next {
+  right: -30px;
+}
+.owl-prev {
+  width: 15px;
+  position: absolute;
+  top: 40%;
+  margin-left: -20px;
+  display: block !important;
+  border:0px solid black;
+}
+.owl-next {
+  width: 15px;
+  position: absolute;
+  top: 40%;
+  right: -25px;
+  display: block !important;
+  border:0px solid black;
+}
+
+.blog_details img{
+  width: 100%;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 58.25%; /* 16:9 */
+  margin-bottom: 20px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/***** CSS NOVO RESPONSIVO *****/
+@media (min-width: 768px){
+  .popular_places_area .single_place .place_info h3{
+    min-height: 130px;
+  }
+}
+
+@media (min-width: 992px){
+  .popular_places_area .single_place .place_info h3{
+    min-height: 160px;
+  }
+}
+
+@media (min-width: 1200px){
+  .popular_places_area .single_place .place_info h3{
+    min-height: 130px;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-wrap {
+    width: 90%;
+    padding: 0;
+  }
+  .owl-nav .owl-prev {
+    left: -10px;
+  }
+  .owl-nav .owl-next {
+    right: -10px;
+  }
+  .popular_places_area .single_place .place_info h3{
+      font-size: 20px;
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 420px) {
+  .owl-nav .owl-prev {
+    left: 0px;
+  }
+  .owl-nav .owl-next {
+    
+  }
+}
+
+@media (max-width: 360px) {
+    .popular_places_area .single_place .place_info h3{
+      font-size: 18px;
+    }
+}
